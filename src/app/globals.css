@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@theme {
+  --color-loop-black: #050505;
+  --color-loop-dark: #0a0a0a;
+  --color-loop-gray: #1a1a1a;
+  --color-loop-muted: #666666;
+  --color-loop-chrome: #c0c0c0;
+  --color-loop-white: #f5f5f5;
+
+  --font-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-slow: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    background-color: var(--color-loop-black);
+    color: var(--color-loop-white);
+    cursor: auto;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-loop-black);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--color-loop-white);
+  }
+
+  a,
+  button {
+    cursor: pointer;
+  }
+
+  html.custom-cursor-active {
+    cursor: none;
+  }
+
+  html.custom-cursor-active a,
+  html.custom-cursor-active button {
+    cursor: none;
+  }
+}
+
+@layer utilities {
+  .text-display {
+    font-family: var(--font-display);
+    font-weight: 300;
+    letter-spacing: -0.04em;
+    line-height: 0.9;
+    text-transform: uppercase;
+  }
+
+  .text-editorial {
+    font-family: var(--font-body);
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    line-height: 1.6;
+  }
+
+  .chrome-text {
+    background: linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #c0c0c0 25%,
+      #ffffff 50%,
+      #a0a0a0 75%,
+      #ffffff 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .grain-overlay {
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    opacity: 0.04;
+    mix-blend-mode: overlay;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  html,
+  body {
+    cursor: auto;
+  }
+
+  a,
+  button {
+    cursor: pointer;
+  }
+}
