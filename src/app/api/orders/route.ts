@@ -41,11 +41,15 @@ export async function POST(request: Request) {
     const body = (await request.json()) as Partial<OrderSubmissionPayload>;
     const { customer, items, total } = body;
 
-    if (!validateCustomer(customer)) {
+    if (!customer || !validateCustomer(customer)) {
       return NextResponse.json(
         { error: "Invalid or incomplete customer details." },
         { status: 400 }
       );
+    }
+
+    if (!items || !Array.isArray(items) || items.length === 0) {
+      return NextResponse.json({ error: "Cart is empty." }, { status: 400 });
     }
 
     if (!validateItems(items)) {
