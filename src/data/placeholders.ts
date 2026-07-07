@@ -31,7 +31,7 @@ export const FIRST_DROP_PRODUCTS: FirstDropProduct[] = [
   {
     id: "different-faces-tee",
     title: "Different Faces Tee",
-    price: "2690 RSD",
+    price: "2690 RSN",
     image: "/products/different faces front.png",
     hoverImage: "/products/different faces back.png",
     buttonLabel: "View →",
@@ -41,7 +41,7 @@ export const FIRST_DROP_PRODUCTS: FirstDropProduct[] = [
   {
     id: "invisible-walls-tee",
     title: "Invisible Walls Tee",
-    price: "2690 RSD",
+    price: "2690 RSN",
     image: "/products/invisible-walls-front.png",
     hoverImage: "/products/invisible-walls-back.png",
     buttonLabel: "View →",
@@ -51,9 +51,9 @@ export const FIRST_DROP_PRODUCTS: FirstDropProduct[] = [
   {
     id: "first-drop-bundle",
     title: "FIRST DROP BUNDLE",
-    price: "4890 RSD",
-    oldPrice: "5380 RSD",
-    badge: "SAVE 490 RSD",
+    price: "4890 RSN",
+    oldPrice: "5380 RSN",
+    badge: "SAVE 490 RSN",
     image: "/products/combination.png",
     buttonLabel: "View Bundle →",
     description:
