@@ -243,7 +243,7 @@ export function CheckoutModal() {
                           </p>
                         </div>
                         <p className="text-[11px] tracking-wider text-loop-white">
-                          {(item.priceAmount * item.quantity).toLocaleString("en-US")} RSN
+                          {(item.priceAmount * item.quantity).toLocaleString("en-US")} RSD
                         </p>
                       </li>
                     ))}

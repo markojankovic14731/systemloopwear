@@ -238,11 +238,11 @@ export function CartProvider({ children }: { children: ReactNode }) {
   );
   const itemCount = useMemo(() => getCartItemCount(items), [items]);
   const subtotalLabel = useMemo(
-    () => `${subtotal.toLocaleString("en-US")} RSN`,
+    () => `${subtotal.toLocaleString("en-US")} RSD`,
     [subtotal]
   );
   const checkoutSubtotalLabel = useMemo(
-    () => `${checkoutSubtotal.toLocaleString("en-US")} RSN`,
+    () => `${checkoutSubtotal.toLocaleString("en-US")} RSD`,
     [checkoutSubtotal]
   );
 
