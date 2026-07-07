@@ -31,8 +31,6 @@ export function Footer() {
               maskRepeat: "no-repeat",
               WebkitMaskPosition: "center",
               maskPosition: "center",
-              WebkitMaskMode: "luminance",
-              maskMode: "luminance",
             }}
           />
           <span className="text-[11px] tracking-[0.5em] uppercase font-light transition-opacity duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:opacity-100">
