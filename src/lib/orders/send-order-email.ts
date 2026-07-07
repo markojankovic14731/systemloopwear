@@ -38,8 +38,12 @@ function getFromEmail(): string {
 }
 
 function isEmailConfigured(): boolean {
-  // TODO: Add RESEND_API_KEY to `.env.local` to enable live order emails.
+  console.log("RESEND_API_KEY exists:", !!process.env.RESEND_API_KEY);
+  console.log("ORDER_FROM_EMAIL:", process.env.ORDER_FROM_EMAIL);
+  console.log("ORDER_OWNER_EMAILS:", process.env.ORDER_OWNER_EMAILS);
+
   return Boolean(process.env.RESEND_API_KEY);
+}
 }
 
 /**
@@ -50,7 +54,7 @@ function isEmailConfigured(): boolean {
  * 2. Add to `.env.local`:
  *    RESEND_API_KEY=re_xxxxxxxxxx
  *    ORDER_FROM_EMAIL="LOOP Orders <orders@your-verified-domain.com>"
- *    ORDER_OWNER_EMAILS=marko.jankovic13731@gmail.com,marko.nikolic.ruma@gmail.com
+ *    ORDER_OWNER_EMAILS=marko.nikolic.ruma@gmail.com
  * 3. Verify your sending domain in Resend
  *
  * TODO (Nodemailer alternative):
@@ -61,7 +65,7 @@ function isEmailConfigured(): boolean {
  *    SMTP_USER=your-user
  *    SMTP_PASS=your-password
  *    ORDER_FROM_EMAIL=LOOP Orders <orders@your-domain.com>
- *    ORDER_OWNER_EMAILS=marko.jankovic13731@gmail.com,marko.nikolic.ruma@gmail.com
+ *    ORDER_OWNER_EMAILS=marko.nikolic.ruma@gmail.com
  * 3. Replace the Resend fetch block below with a nodemailer transporter sendMail call
  */
 export async function sendOrderEmail(
