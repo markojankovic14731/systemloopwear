@@ -182,10 +182,10 @@ export function CollectionCard({
           {product.oldPrice ? (
             <div className="flex flex-col gap-2">
               <div className="flex flex-wrap items-center gap-3">
-                <span className="text-[11px] tracking-wider text-loop-muted line-through">
+                <span className="text-[13px] tracking-wider text-loop-muted line-through">
                   {product.oldPrice}
                 </span>
-                <span className="text-[11px] tracking-wider text-loop-white">
+                <span className="text-[13px] tracking-wider text-loop-white">
                   {product.price}
                 </span>
               </div>
@@ -196,7 +196,7 @@ export function CollectionCard({
               )}
             </div>
           ) : (
-            <p className="text-[11px] tracking-wider text-loop-white">{product.price}</p>
+            <p className="text-[13px] tracking-wider text-loop-white">{product.price}</p>
           )}
         </div>
       </div>
