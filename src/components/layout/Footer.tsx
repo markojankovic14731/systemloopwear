@@ -1,5 +1,6 @@
 "use client";
 
+import { LoopLogo } from "@/components/cursor/LoopLogo";
 import { NavUnderlineLink } from "@/components/layout/NavUnderlineLink";
 
 const socialLinks = [
@@ -17,22 +18,10 @@ export function Footer() {
         <div className="group flex items-center gap-4">
           <div
             aria-hidden="true"
-            className="transition-[filter,opacity] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:opacity-100 group-hover:drop-shadow-[0_0_14px_rgba(255,255,255,0.28)]"
-            style={{
-              width: 18,
-              height: 18,
-              flexShrink: 0,
-              backgroundColor: "#ffffff",
-              WebkitMaskImage: "url('/logo.png')",
-              maskImage: "url('/logo.png')",
-              WebkitMaskSize: "contain",
-              maskSize: "contain",
-              WebkitMaskRepeat: "no-repeat",
-              maskRepeat: "no-repeat",
-              WebkitMaskPosition: "center",
-              maskPosition: "center",
-            }}
-          />
+            className="shrink-0 transition-[filter,opacity] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:opacity-100 group-hover:drop-shadow-[0_0_14px_rgba(255,255,255,0.28)]"
+          >
+            <LoopLogo size={18} />
+          </div>
           <span className="text-[11px] tracking-[0.5em] uppercase font-light transition-opacity duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:opacity-100">
             LOOP
           </span>
