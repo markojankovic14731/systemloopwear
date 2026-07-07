@@ -44,7 +44,6 @@ function isEmailConfigured(): boolean {
 
   return Boolean(process.env.RESEND_API_KEY);
 }
-}
 
 /**
  * Sends the order notification email to the store owners.
